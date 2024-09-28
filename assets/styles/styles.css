@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #F4F6FA;
+}
+
+header {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subject-container {
+  width: 167px;
+  height: 40px;
+}
+
+.darkmode-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.darkmode-switch__btn {
+  width: 32px;
+  height: 20px;
+  border: none;
+  border-radius: 999px;
+  background-color: #a729f5;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.darkmode-switch__btn.is-on {
+  background-color: #a729f5;
+}
+
+.darkmode-switch__btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  transition: left 0.2s;
+}
+
+.darkmode-switch__btn.is-on::after {
+  left: calc(100% - 16px);
+}
+
+main {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-menu {
+  margin-top: 32px;
+  width: 100%;
+  max-width: 327px;
+}
+.start-menu__title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 100%;
+  color: #313E51;
+}
+.start-menu__title--bold {
+  margin-top: 8px;
+  font-weight: 500;
+  color: #313E51;
+}
+.start-menu__caption {
+  margin-top: 16px;
+  font-family: "Rubik";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #626C7F;
+}
+.start-menu__subjects-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.start-menu__subject {
+  padding: 12px;
+  border: none;
+  width: 100%;
+  height: 64px;
+  box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #313E51;
+}
+.start-menu__img-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.start-menu__img-box--html {
+  background-color: #FFF1E9;
+}
+.start-menu__img-box--css {
+  background-color: #E0FDEF;
+}
+.start-menu__img-box--js {
+  background-color: #EBF0FF;
+}
+.start-menu__img-box--acc {
+  background-color: #F6E7FF;
+}
+.start-menu__img {
+  width: 28.57px;
+  height: 28.57px;
+}
