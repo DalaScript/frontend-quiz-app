@@ -4,15 +4,44 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   background-color: #F4F6FA;
+  position: relative;
+}
+
+.pattern-bg {
+  position: absolute;
+  z-index: -1;
+  display: none;
+}
+.pattern-bg--active {
+  display: block;
+}
+
+.darkmode {
+  background-color: #313E51;
+}
+.darkmode .start-menu__title {
+  color: #FFFFFF;
+}
+.darkmode .start-menu__caption {
+  color: #ABC1E1;
+}
+.darkmode .start-menu__subject {
+  background-color: #3B4D66;
+  color: #FFFFFF;
 }
 
 header {
   padding: 16px 24px;
   display: flex;
-  align-items: center;
+  justify-content: center;
+}
+
+.header-inner {
+  max-width: 375px;
+  width: 100%;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -24,38 +53,43 @@ header {
 .darkmode-switch {
   display: flex;
   align-items: center;
-  gap: 8px;
+}
+.darkmode-switch__icon {
+  display: none;
+}
+.darkmode-switch__icon--active {
+  display: block;
 }
 
 .darkmode-switch__btn {
+  margin: 0 8px;
+  position: relative;
+  display: block;
   width: 32px;
   height: 20px;
-  border: none;
   border-radius: 999px;
   background-color: #a729f5;
-  display: block;
-  position: relative;
   cursor: pointer;
 }
-
-.darkmode-switch__btn.is-on {
-  background-color: #a729f5;
+.darkmode-switch__btn:has(:focus-visible) {
+  outline: auto;
+  outline: auto -webkit-focus-ring-color;
 }
-
-.darkmode-switch__btn::after {
-  content: "";
+.darkmode-switch__btn-checkbox {
+  appearance: none;
   position: absolute;
   top: 50%;
   left: 4px;
   width: 12px;
   height: 12px;
-  border-radius: 9999px;
+  border-radius: 999px;
   transform: translateY(-50%);
-  background-color: #ffffff;
+  outline: none;
+  background-color: #FFFFFF;
   transition: left 0.2s;
+  cursor: pointer;
 }
-
-.darkmode-switch__btn.is-on::after {
+.darkmode-switch__btn-checkbox:checked {
   left: calc(100% - 16px);
 }
 
@@ -64,6 +98,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+picture {
+  display: flex;
 }
 
 .start-menu {
@@ -142,4 +180,91 @@ main {
 .start-menu__img {
   width: 28.57px;
   height: 28.57px;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    padding: 40px 0 0;
+  }
+
+  .header-inner {
+    max-width: 640px;
+  }
+
+  .subject-container {
+    width: 253px;
+    height: 56px;
+  }
+
+  .darkmode-switch__btn {
+    margin: 0 16px;
+    width: 48px;
+    height: 28px;
+  }
+  .darkmode-switch__btn-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  .darkmode-switch__btn-checkbox:checked {
+    left: calc(100% - 24px);
+  }
+
+  .darkmode-switch__btn {
+    width: 48px;
+    height: 28px;
+  }
+
+  .start-menu {
+    max-width: 640px;
+  }
+  .start-menu__title {
+    font-size: 64px;
+  }
+  .start-menu__caption {
+    font-size: 20px;
+  }
+  .start-menu__subjects-container {
+    margin-top: 64px;
+    gap: 24px;
+  }
+  .start-menu__subject {
+    height: 80px;
+    gap: 32px;
+    font-size: 28px;
+  }
+  .start-menu__img-box {
+    width: 56px;
+    height: 56px;
+  }
+  .start-menu__img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  header {
+    padding: 83px 0 0;
+  }
+
+  .header-inner {
+    max-width: 1157px;
+  }
+
+  .start-menu {
+    margin-top: 85px;
+    max-width: 1160px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .start-menu__caption {
+    margin-top: 48px;
+  }
+  .start-menu__subjects-container {
+    margin-top: 0;
+    width: 564px;
+  }
+  .start-menu__subject {
+    padding: 20px;
+    height: 96px;
+  }
 }

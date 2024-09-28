@@ -13,14 +13,40 @@
   <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
 <body>
+  <picture>
+    <source media="(min-width: 768px)" srcset="./assets/images/pattern-background-tablet-light.svg">
+    <img class="pattern-bg pattern-bg--active" id="pattern-bg__light" src="./assets/images/pattern-background-mobile-light.svg" alt="background pattern for mobile device">
+  </picture>
+  <picture>
+    <source media="(min-width: 768px)" srcset="./assets/images/pattern-background-tablet-dark.svg">
+    <img class="pattern-bg" id="pattern-bg__dark" src="./assets/images/pattern-background-mobile-dark.svg" alt="background pattern for mobile device">
+  </picture>
   <header>
-    <div class="subject-container">
+    <div class="header-inner">
+      <div class="subject-container">
 
-    </div>
-    <div class="darkmode-switch">
-      <img src="./assets/images/icon-sun-dark.svg" width="16" height="16" alt="sun dark icon">
-      <button class="darkmode-switch__btn" id="darkmode-switch__btn"></button>
-      <img src="./assets/images/icon-moon-dark.svg" width="16" height="16" alt="moon dark icon">
+      </div>
+      <div class="darkmode-switch">
+        <picture>
+          <source media="(min-width: 768px)" width="24px" height="24px" srcset="./assets/images/icon-sun-light.svg">
+          <img class="darkmode-switch__icon darkmode-switch__icon--dark" src="./assets/images/icon-sun-light.svg" width="16" height="16" alt="sun light icon">
+        </picture>
+        <picture>
+          <source media="(min-width: 768px)" width="24px" height="24px" srcset="./assets/images/icon-sun-dark.svg">
+          <img class="darkmode-switch__icon darkmode-switch__icon--light darkmode-switch__icon--active" src="./assets/images/icon-sun-dark.svg" width="16" height="16" alt="sun dark icon">
+        </picture>
+        <label class="darkmode-switch__btn" id="darkmode-switch__btn">
+          <input type="checkbox" class="darkmode-switch__btn-checkbox" />
+        </label>
+        <picture>
+          <source media="(min-width: 768px)" width="24px" height="24px" srcset="./assets/images/icon-moon-light.svg">
+          <img class="darkmode-switch__icon darkmode-switch__icon--dark" src="./assets/images/icon-moon-light.svg" width="16" height="16" alt="moon light icon">
+        </picture>
+        <picture>
+          <source media="(min-width: 768px)" width="24px" height="24px" srcset="./assets/images/icon-moon-dark.svg">
+          <img class="darkmode-switch__icon darkmode-switch__icon--light darkmode-switch__icon--active" src="./assets/images/icon-moon-dark.svg" width="16" height="16" alt="moon dark icon">
+        </picture>
+      </div>
     </div>
   </header>
   <main>
@@ -40,6 +66,7 @@
       </div>
     </section>
   </main>
+  
   <!-- Quiz menu start -->
 
   
@@ -73,6 +100,6 @@
   <!-- score --> out of 10
 
   <!-- Quiz completed end -->
-<script src="./assets/script/script.js"></script>
+<script src="./assets/script/darkmode.js"></script>
 </body>
 </html>
