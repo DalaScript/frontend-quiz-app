@@ -23,9 +23,9 @@
   </picture>
   <header>
     <div class="header-inner">
-      <div class="subject-container">
+      <p class="score-page__subject" id="subject-container">
 
-      </div>
+      </p>
       <div class="darkmode-switch">
         <picture>
           <source media="(min-width: 768px)" width="24px" height="24px" srcset="./assets/images/icon-sun-light.svg">
@@ -50,7 +50,7 @@
     </div>
   </header>
   <main>
-    <section class="start-menu">
+    <section class="start-menu" id="start-menu" style="display: block">
       <div class="start-menu__text-content">
         <p class="start-menu__title">Welcome to the</p>
         <p class="start-menu__title start-menu__title--bold">Frontend Quiz!</p>
@@ -58,48 +58,57 @@
           Pick a subject to get started.
         </p>
       </div>
-      <div class="start-menu__subjects-container">
-        <button class="start-menu__subject"><span class="start-menu__img-box start-menu__img-box--html"><img class="start-menu__img" src="./assets/images/icon-html.svg" alt="html icon"></span>HTML</button>
-        <button class="start-menu__subject"><span class="start-menu__img-box start-menu__img-box--css"><img class="start-menu__img" src="./assets/images/icon-css.svg" alt="css icon"></span>CSS</button>
-        <button class="start-menu__subject"><span class="start-menu__img-box start-menu__img-box--js"><img class="start-menu__img" src="./assets/images/icon-js.svg" alt="js icon"></span>JavaScript</button>
-        <button class="start-menu__subject"><span class="start-menu__img-box start-menu__img-box--acc"><img class="start-menu__img" src="./assets/images/icon-accessibility.svg" alt="iaccessibility icon"></span>Accessibility</button>
+      <div class="start-menu__subjects-container" id="start-menu__subjects-container">
+        
       </div>
     </section>
+
+    <section class="quiz-page" id="quiz-page" style="display: none">
+      <div class="quiz-page__question-container">
+        <p class="quiz-page__questions-count">
+          Question <!-- number --> of 10
+        </p>
+        <p class="quiz-page__question">
+          Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for normal text?
+        </p>
+        <div class="quiz-page__progress-bar">
+          <div></div>
+        </div>
+      </div>
+      <div class="quiz-page__answers-container">
+        <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">A</span>4.5 : 1</button>
+        <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">B</span>3 : 1</button>
+        <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">C</span>2.5 : 1</button>
+        <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">D</span>5 : 1</button>
+      </div>
+      <button class="quiz-page__submit-btn" id="quiz-page__submit-btn">Submit answer</button>
+      <p class="quiz-page__error" style="display: none">
+        <img class="quiz-page__error-img" src="./assets/images/icon-error.svg" alt="error icon">Please select an answer
+      </p>
+      <button class="quiz-page__next-question-btn" id="quiz-page__next-question-btn" style="display: none;">Next Question</button>
+    </section>
+
+    <section class="score-page" id="score-page" style="display: none">
+      <p class="score-page__title">
+        Quiz completed <br />
+        <span class="score-page__title-bold">You scored...</span>
+      </p>
+      <div class="score-page__score-display">
+        <p class="score-page__subject" id="score-page__subject">
+          <span class="score-page__img-box score-page__img-box--html">
+            <img class="score-page__img" src="./assets/images/icon-accessibility.svg" alt="html icon">
+          </span>
+          Accessibility
+        </p>
+        <p class="score-page__score">8</p>
+        <p class="score-page__caption">
+          out of 10
+        </p>
+      </div>
+      <button class="score-page__btn">Play Again</button>
+    </section>
   </main>
-  
-  <!-- Quiz menu start -->
-
-  
-  
-
-  
-  
-  
-  Accessibility
-
-  <!-- Quiz menu end -->
-
-  <!-- Quiz question start -->
-
-  Question <!-- number --> of 10
-
-  A
-  B
-  C
-  D
-
-  Submit answer
-
-  <!-- Quiz question end -->
-
-  <!-- Quiz completed start -->
-
-  Quiz completed
-  You scored...
-
-  <!-- score --> out of 10
-
-  <!-- Quiz completed end -->
 <script src="./assets/script/darkmode.js"></script>
+<script src="./assets/script/script.js"></script>
 </body>
 </html>
