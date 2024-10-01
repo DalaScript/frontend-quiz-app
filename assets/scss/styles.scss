@@ -203,11 +203,11 @@ picture {
         justify-content: center;
 
         &--html {
-            background: #FFF1E9;
+            background-color: #FFF1E9;
         }
 
         &--css {
-            background: #E0FDEF;
+            background-color: #E0FDEF;
         }
 
         &--javascript {
@@ -265,7 +265,7 @@ picture {
         justify-content: flex-start;
 
         div {
-            width: 50%;
+            // width: 0%;
             height: 8px;
 
             background: $purple;
@@ -284,23 +284,29 @@ picture {
     }
 
     &__answer-btn {
-        padding: 12px;
-        border: none;
+        padding: 9px 57px 9px 9px;
+        border: 3px solid $pure-white;
         width: 100%;
         height: 64px;
-        box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
         border-radius: 12px;
-        background-color: #FFFFFF;
+
+        box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
+        background-color: $pure-white;
+
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 16px;
+
         font-family: "Rubik";
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
         line-height: 100%;
-        color: #313E51;
+
+        color: $dark-navy;
+        text-align: left;
+
 
         &--active {
             border: 3px solid $purple;
@@ -336,8 +342,8 @@ picture {
                 background-position: center;
                 
                 position: absolute;
-                top: 16px;
-                right: 12px;
+                top: 13px;
+                right: 9px;
             }
         }
 
@@ -387,6 +393,8 @@ picture {
         background: $purple;
         box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
         border-radius: 12px;
+
+        display: none;
 
         font-family: 'Rubik';
         font-style: normal;

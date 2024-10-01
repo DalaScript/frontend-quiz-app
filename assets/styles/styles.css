@@ -166,10 +166,10 @@ picture {
   justify-content: center;
 }
 .start-menu__img-box--html {
-  background: #FFF1E9;
+  background-color: #FFF1E9;
 }
 .start-menu__img-box--css {
-  background: #E0FDEF;
+  background-color: #E0FDEF;
 }
 .start-menu__img-box--javascript {
   background-color: #EBF0FF;
@@ -216,7 +216,6 @@ picture {
   justify-content: flex-start;
 }
 .quiz-page__progress-bar div {
-  width: 50%;
   height: 8px;
   background: #a729f5;
   border-radius: 104px;
@@ -229,12 +228,12 @@ picture {
   gap: 12px;
 }
 .quiz-page__answer-btn {
-  padding: 12px;
-  border: none;
+  padding: 9px 57px 9px 9px;
+  border: 3px solid #FFFFFF;
   width: 100%;
   height: 64px;
-  box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
   border-radius: 12px;
+  box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -246,6 +245,7 @@ picture {
   font-size: 18px;
   line-height: 100%;
   color: #313E51;
+  text-align: left;
 }
 .quiz-page__answer-btn--active {
   border: 3px solid #a729f5;
@@ -273,8 +273,8 @@ picture {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 16px;
-  right: 12px;
+  top: 13px;
+  right: 9px;
 }
 .quiz-page__answer-btn--wrong {
   border: 3px solid #EE5454;
@@ -311,6 +311,7 @@ picture {
   background: #a729f5;
   box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
   border-radius: 12px;
+  display: none;
   font-family: "Rubik";
   font-style: normal;
   font-weight: 500;

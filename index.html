@@ -59,33 +59,31 @@
         </p>
       </div>
       <div class="start-menu__subjects-container" id="start-menu__subjects-container">
-        
+
       </div>
     </section>
 
     <section class="quiz-page" id="quiz-page" style="display: none">
       <div class="quiz-page__question-container">
-        <p class="quiz-page__questions-count">
-          Question <!-- number --> of 10
+        <p class="quiz-page__questions-count" id="quiz-page__questions-count">
         </p>
-        <p class="quiz-page__question">
-          Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for normal text?
+        <p class="quiz-page__question" id="quiz-page__question">
         </p>
-        <div class="quiz-page__progress-bar">
+        <div class="quiz-page__progress-bar" id="quiz-page__progress-bar">
           <div></div>
         </div>
       </div>
-      <div class="quiz-page__answers-container">
-        <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">A</span>4.5 : 1</button>
+      <div class="quiz-page__answers-container" id="quiz-page__answers-container">
+        <!-- <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">A</span>4.5 : 1</button>
         <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">B</span>3 : 1</button>
         <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">C</span>2.5 : 1</button>
-        <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">D</span>5 : 1</button>
+        <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">D</span>5 : 1</button> -->
       </div>
-      <button class="quiz-page__submit-btn" id="quiz-page__submit-btn">Submit answer</button>
+      <button class="quiz-page__submit-btn quiz-page__submit-btn--active" id="quiz-page__submit-btn">Submit answer</button>
       <p class="quiz-page__error" style="display: none">
         <img class="quiz-page__error-img" src="./assets/images/icon-error.svg" alt="error icon">Please select an answer
       </p>
-      <button class="quiz-page__next-question-btn" id="quiz-page__next-question-btn" style="display: none;">Next Question</button>
+      <button class="quiz-page__next-question-btn" id="quiz-page__next-question-btn">Next Question</button>
     </section>
 
     <section class="score-page" id="score-page" style="display: none">
@@ -95,10 +93,7 @@
       </p>
       <div class="score-page__score-display">
         <p class="score-page__subject" id="score-page__subject">
-          <span class="score-page__img-box score-page__img-box--html">
-            <img class="score-page__img" src="./assets/images/icon-accessibility.svg" alt="html icon">
-          </span>
-          Accessibility
+          
         </p>
         <p class="score-page__score">8</p>
         <p class="score-page__caption">
