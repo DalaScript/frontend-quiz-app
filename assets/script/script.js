@@ -167,7 +167,7 @@ nextQuestionBtn.addEventListener('click', () => {
 playAgainBtn.addEventListener('click', () => {
     resetQuiz();
     scorePage.style.display = 'none',
-        startMenu.style.display = 'block';
+    startMenu.style.display = 'flex';
 });
 
 const showScore = () => {
