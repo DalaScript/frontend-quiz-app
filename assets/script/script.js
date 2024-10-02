@@ -95,7 +95,7 @@ const loadQuestion = () => {
 
         const btnAlphabet = document.createElement('span');
         btnAlphabet.textContent = `${answersAlphabet[answersCount]}`;
-        btnAlphabet.classList.add("quiz-page__answer-box")
+        btnAlphabet.classList.add("quiz-page__answer-box");
 
         btn.appendChild(btnAlphabet);
         btn.appendChild(btnAnswer);

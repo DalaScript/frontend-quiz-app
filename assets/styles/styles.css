@@ -146,7 +146,7 @@ picture {
 }
 
 .start-menu {
-  margin-top: 32px;
+  margin: 32px 0 251px;
   width: 100%;
   max-width: 327px;
   display: none;
@@ -228,7 +228,7 @@ picture {
 }
 
 .quiz-page {
-  margin-top: 32px;
+  margin: 32px 0 95px;
   width: 100%;
   max-width: 327px;
   display: none;
@@ -352,7 +352,10 @@ picture {
   width: 40px;
   height: 40px;
   border-radius: 6px;
-  color: #313E51;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #626C7F;
   background-color: #F4F6FA;
 }
 .quiz-page__submit-btn, .quiz-page__next-question-btn {
@@ -527,6 +530,7 @@ picture {
   }
 
   .start-menu {
+    margin: 49px 0 241px;
     max-width: 640px;
   }
   .start-menu__title {
@@ -552,6 +556,83 @@ picture {
     width: 40px;
     height: 40px;
   }
+
+  .quiz-page {
+    margin: 49px 0 57px;
+    max-width: 640px;
+  }
+  .quiz-page__question-count {
+    font-size: 20px;
+  }
+  .quiz-page__question {
+    margin-top: 27px;
+    font-size: 36px;
+  }
+  .quiz-page__progress-bar {
+    margin-top: 40px;
+  }
+  .quiz-page__answers-container {
+    margin-top: 64px;
+    gap: 24px;
+  }
+  .quiz-page__answer-btn {
+    height: 80px;
+    gap: 32px;
+    font-size: 28px;
+  }
+  .quiz-page__answer-box {
+    width: 56px;
+    height: 56px;
+  }
+  .quiz-page__submit-btn, .quiz-page__next-question-btn {
+    margin-top: 32px;
+    height: 92px;
+    font-size: 28px;
+  }
+  .quiz-page__error {
+    margin-top: 32px;
+    font-size: 24px;
+  }
+  .quiz-page__error-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .score-page {
+    margin: 49px 0 167px;
+    max-width: 640px;
+  }
+  .score-page__title {
+    font-size: 64px;
+  }
+  .score-page__score-display {
+    padding: 48px;
+  }
+  .score-page__subject {
+    font-size: 28px;
+    gap: 24px;
+  }
+  .score-page__img-box {
+    width: 56px;
+    height: 56px;
+  }
+  .score-page__img-box img {
+    width: 40px;
+    height: 40px;
+  }
+  .score-page__score {
+    margin-top: 40px;
+    font-size: 144px;
+  }
+  .score-page__caption {
+    font-size: 24px;
+    line-height: 150%;
+  }
+  .score-page__btn {
+    margin-top: 32px;
+    height: 92px;
+    font-size: 28px;
+  }
 }
 @media only screen and (min-width: 1440px) {
   header {
@@ -563,7 +644,7 @@ picture {
   }
 
   .start-menu {
-    margin-top: 85px;
+    margin: 85px 0 280px;
     max-width: 1160px;
     justify-content: space-between;
   }

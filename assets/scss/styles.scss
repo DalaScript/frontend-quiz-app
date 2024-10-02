@@ -189,7 +189,7 @@ picture {
 }
 
 .start-menu {
-    margin-top: 32px;
+    margin: 32px 0 251px;
     width: 100%;
     max-width: 327px;
 
@@ -292,7 +292,7 @@ picture {
 }
 
 .quiz-page {
-    margin-top: 32px;
+    margin: 32px 0 95px;
     width: 100%;
     max-width: 327px;
 
@@ -450,9 +450,14 @@ picture {
         padding: 11px 13px 11px 14px;
         width: 40px;
         height: 40px;
+
         border-radius: 6px;
 
-        color: $dark-navy;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: $grey-navy;
 
         background-color: $light-grey;
     }
@@ -674,6 +679,7 @@ picture {
     }
 
     .start-menu {
+        margin: 49px 0 241px;
         max-width: 640px;
 
         &__title {
@@ -706,17 +712,119 @@ picture {
             height: 40px;
         }
     }
+
+    .quiz-page {
+        margin: 49px 0 57px;
+        max-width: 640px;
+
+        &__question-count {
+            font-size: 20px;
+        }
+
+        &__question {
+            margin-top: 27px;
+            font-size: 36px;
+        }
+
+        &__progress-bar {
+            margin-top: 40px;
+        }
+
+        &__answers-container {
+            margin-top: 64px;
+
+            gap: 24px;
+        }
+
+        &__answer-btn {
+            height: 80px;
+
+            gap: 32px;
+
+            font-size: 28px;
+        }
+
+        &__answer-box {
+            width: 56px;
+            height: 56px;
+        }
+
+        &__submit-btn,
+        &__next-question-btn {
+            margin-top: 32px;      
+            height: 92px;
+
+            font-size: 28px;
+        }
+
+        &__error {
+            margin-top: 32px;
+            font-size: 24px;
+
+            &-img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+    
+    .score-page {
+        margin: 49px 0 167px;
+        max-width: 640px;
+
+        &__title {
+            font-size: 64px;
+        }
+
+        &__score-display {
+            padding: 48px;
+        }
+
+        &__subject {
+            font-size: 28px;
+
+            gap: 24px;
+        }
+
+        &__img-box {
+            width: 56px;
+            height: 56px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &__score {
+            margin-top: 40px;
+            font-size: 144px;
+        }
+
+        &__caption {
+            font-size: 24px;
+            line-height: 150%;
+        }
+
+        &__btn {
+            margin-top: 32px;
+            height: 92px;
+            font-size: 28px;
+        }
+    }
 }
 
 @media only screen and (min-width: 1440px) {
     header {
         padding: 83px 0 0;
     }
+
     .header-inner {
         max-width: 1157px;
     }
+
     .start-menu {
-        margin-top: 85px;
+        margin: 85px 0 280px;
         max-width: 1160px;
         
         justify-content: space-between;
