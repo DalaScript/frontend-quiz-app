@@ -14,10 +14,12 @@
 </head>
 <body>
   <picture>
+    <source media="(min-width: 1440px)" srcset="./assets/images/pattern-background-desktop-light.svg">
     <source media="(min-width: 768px)" srcset="./assets/images/pattern-background-tablet-light.svg">
     <img class="pattern-bg pattern-bg--active" id="pattern-bg__light" src="./assets/images/pattern-background-mobile-light.svg" alt="background pattern for mobile device">
   </picture>
   <picture>
+    <source media="(min-width: 1440px)" srcset="./assets/images/pattern-background-desktop-dark.svg">
     <source media="(min-width: 768px)" srcset="./assets/images/pattern-background-tablet-dark.svg">
     <img class="pattern-bg" id="pattern-bg__dark" src="./assets/images/pattern-background-mobile-dark.svg" alt="background pattern for mobile device">
   </picture>
@@ -74,12 +76,7 @@
         </div>
       </div>
       <div class="quiz-page__answers-container" id="quiz-page__answers-container">
-        <div class="quiz-page__answers" id="quiz-page__answers">
-          <!-- <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">A</span>4.5 : 1</button>
-          <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">B</span>3 : 1</button>
-          <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">C</span>2.5 : 1</button>
-          <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">D</span>5 : 1</button> -->
-        </div>
+        <div class="quiz-page__answers" id="quiz-page__answers"></div>
         <button class="quiz-page__submit-btn quiz-page__submit-btn--active" id="quiz-page__submit-btn">Submit answer</button>
         <p class="quiz-page__error">
           <img class="quiz-page__error-img" src="./assets/images/icon-error.svg" alt="error icon">Please select an answer

@@ -328,7 +328,6 @@ picture {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 13px;
   right: 9px;
 }
 .quiz-page__answer-btn--wrong {
@@ -348,7 +347,6 @@ picture {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 13px;
   right: 9px;
 }
 .quiz-page__answer-box {
@@ -551,6 +549,7 @@ picture {
     gap: 24px;
   }
   .start-menu__subject {
+    border-radius: 24px;
     height: 80px;
     gap: 32px;
     font-size: 28px;
@@ -558,6 +557,7 @@ picture {
   .start-menu__img-box {
     width: 56px;
     height: 56px;
+    border-radius: 12px;
   }
   .start-menu__img {
     width: 40px;
@@ -584,20 +584,19 @@ picture {
   }
   .quiz-page__answer-btn {
     min-height: 80px;
+    border-radius: 24px;
     gap: 32px;
     font-size: 28px;
   }
   .quiz-page__answer-btn--correct-icon::after {
     width: 40px;
     height: 40px;
-    top: 17px;
-    right: 9px;
+    right: 17px;
   }
   .quiz-page__answer-btn--wrong::after {
     width: 40px;
     height: 40px;
-    top: 17px;
-    right: 9px;
+    right: 17px;
   }
   .quiz-page__answer-option {
     max-inline-size: 456px;
@@ -605,10 +604,12 @@ picture {
   .quiz-page__answer-box {
     width: 56px;
     height: 56px;
+    border-radius: 12px;
   }
   .quiz-page__submit-btn, .quiz-page__next-question-btn {
     margin-top: 32px;
     height: 92px;
+    border-radius: 24px;
     font-size: 28px;
   }
   .quiz-page__error {
@@ -629,14 +630,16 @@ picture {
   }
   .score-page__score-display {
     padding: 48px;
+    border-radius: 24px;
   }
   .score-page__subject {
-    font-size: 28px;
     gap: 24px;
+    font-size: 28px;
   }
   .score-page__img-box {
     width: 56px;
     height: 56px;
+    border-radius: 12px;
   }
   .score-page__img-box img {
     width: 40px;
@@ -653,6 +656,7 @@ picture {
   .score-page__btn {
     margin-top: 32px;
     height: 92px;
+    border-radius: 24px;
     font-size: 28px;
   }
 }
@@ -723,6 +727,7 @@ picture {
   }
   .quiz-page__answer-btn {
     min-height: 92px;
+    padding: 15px 60px 15px 17px;
   }
   .quiz-page__answer-option {
     max-inline-size: 364px;

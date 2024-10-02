@@ -420,7 +420,6 @@ picture {
                 background-position: center;
                 
                 position: absolute;
-                top: 13px;
                 right: 9px;
             }
         }
@@ -445,7 +444,6 @@ picture {
                 background-position: center;
                 
                 position: absolute;
-                top: 13px;
                 right: 9px;
             }
         }
@@ -705,6 +703,7 @@ picture {
         }
 
         &__subject {
+            border-radius: 24px;
             height: 80px;
             gap: 32px;
 
@@ -714,6 +713,7 @@ picture {
         &__img-box {
             width: 56px;
             height: 56px;
+            border-radius: 12px;
         }
 
         &__img {
@@ -747,6 +747,7 @@ picture {
 
         &__answer-btn {
             min-height: 80px;
+            border-radius: 24px;
             gap: 32px;
 
             font-size: 28px;
@@ -756,8 +757,7 @@ picture {
                     width: 40px;
                     height: 40px;
                     
-                    top: 17px;
-                    right: 9px;
+                    right: 17px;
                 }
             }
     
@@ -766,8 +766,7 @@ picture {
                     width: 40px;
                     height: 40px;
                     
-                    top: 17px;
-                    right: 9px;
+                    right: 17px;
                 }
             }
         }
@@ -779,12 +778,14 @@ picture {
         &__answer-box {
             width: 56px;
             height: 56px;
+            border-radius: 12px;
         }
 
         &__submit-btn,
         &__next-question-btn {
             margin-top: 32px;      
             height: 92px;
+            border-radius: 24px;
 
             font-size: 28px;
         }
@@ -810,17 +811,18 @@ picture {
 
         &__score-display {
             padding: 48px;
+            border-radius: 24px;
         }
 
         &__subject {
-            font-size: 28px;
-
             gap: 24px;
+            font-size: 28px;
         }
 
         &__img-box {
             width: 56px;
             height: 56px;
+            border-radius: 12px;
 
             img {
                 width: 40px;
@@ -841,6 +843,7 @@ picture {
         &__btn {
             margin-top: 32px;
             height: 92px;
+            border-radius: 24px;
             font-size: 28px;
         }
     }
@@ -927,6 +930,7 @@ picture {
 
         &__answer-btn {
             min-height: 92px;
+            padding: 15px 60px 15px 17px;
         }
 
         &__answer-option {
@@ -966,7 +970,6 @@ picture {
     }
 
     .quiz-page {
-        
         &__answer-btn {
             &:not(.quiz-page__answer-btn--active, .quiz-page__answer-btn:disabled):hover {
                 .quiz-page {
