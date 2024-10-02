@@ -53,6 +53,7 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - JavaScript
+- Fetch
 - bem - [Block Element Modifier](https://getbem.com/introduction/)
 - scss - [Sassy Cascading Style Sheets](https://sass-lang.com/documentation/at-rules/control/for/)
 
