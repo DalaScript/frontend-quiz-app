@@ -31,6 +31,47 @@ body {
   background-color: #3B4D66;
   color: #FFFFFF;
 }
+.darkmode .quiz-page__questions-count {
+  color: #ABC1E1;
+}
+.darkmode .quiz-page__question {
+  color: #FFFFFF;
+}
+.darkmode .quiz-page__progress-bar {
+  background: #3B4D66;
+}
+.darkmode .quiz-page__answer-btn {
+  border: 3px solid #3B4D66;
+  background-color: #3B4D66;
+  color: #FFFFFF;
+}
+.darkmode .quiz-page__answer-btn--active {
+  border: 3px solid #a729f5;
+}
+.darkmode .quiz-page__answer-btn--correct {
+  border: 3px solid #26D782;
+}
+.darkmode .quiz-page__answer-btn--wrong {
+  border: 3px solid #EE5454;
+}
+.darkmode .quiz-page__error {
+  color: #FFFFFF;
+}
+.darkmode .score-page__title {
+  color: #FFFFFF;
+}
+.darkmode .score-page__score-display {
+  background-color: #3B4D66;
+}
+.darkmode .score-page__subject {
+  color: #FFFFFF;
+}
+.darkmode .score-page__score {
+  color: #FFFFFF;
+}
+.darkmode .score-page__caption {
+  color: #ABC1E1;
+}
 
 header {
   padding: 16px 24px;
@@ -108,6 +149,10 @@ picture {
   margin-top: 32px;
   width: 100%;
   max-width: 327px;
+  display: none;
+}
+.start-menu--active {
+  display: block;
 }
 .start-menu__title {
   font-family: "Rubik";
@@ -186,6 +231,10 @@ picture {
   margin-top: 32px;
   width: 100%;
   max-width: 327px;
+  display: none;
+}
+.quiz-page--active {
+  display: block;
 }
 .quiz-page__questions-count {
   font-family: "Rubik";
@@ -216,9 +265,11 @@ picture {
   justify-content: flex-start;
 }
 .quiz-page__progress-bar div {
+  width: 0%;
   height: 8px;
   background: #a729f5;
   border-radius: 104px;
+  transition: width 0.5s ease-out;
 }
 .quiz-page__answers-container {
   margin-top: 40px;
@@ -301,6 +352,7 @@ picture {
   width: 40px;
   height: 40px;
   border-radius: 6px;
+  color: #313E51;
   background-color: #F4F6FA;
 }
 .quiz-page__submit-btn, .quiz-page__next-question-btn {
@@ -324,7 +376,7 @@ picture {
 }
 .quiz-page__error {
   margin-top: 12px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -340,11 +392,18 @@ picture {
   width: 32px;
   height: 32px;
 }
+.quiz-page__error--active {
+  display: flex;
+}
 
 .score-page {
   margin-top: 32px;
   width: 100%;
   max-width: 327px;
+  display: none;
+}
+.score-page--active {
+  display: block;
 }
 .score-page__title {
   font-family: "Rubik";
@@ -506,8 +565,10 @@ picture {
   .start-menu {
     margin-top: 85px;
     max-width: 1160px;
-    display: flex;
     justify-content: space-between;
+  }
+  .start-menu--active {
+    display: flex;
   }
   .start-menu__caption {
     margin-top: 48px;

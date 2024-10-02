@@ -49,6 +49,66 @@ body {
             color: $pure-white;
         }
     }
+
+    .quiz-page {
+        &__questions-count {
+            color: $light-bluish;
+        }
+    
+        &__question {
+            color: $pure-white;
+        }
+    
+        &__progress-bar {
+            background: $navy;
+        }
+    
+        &__answer-btn {
+            border: 3px solid $navy;
+    
+            background-color: $navy;
+    
+            color: $pure-white;
+
+            &--active {
+                border: 3px solid $purple;
+            }
+    
+            &--correct {
+                border: 3px solid $green;
+            }
+    
+            &--wrong {
+                border: 3px solid $red;
+            }
+        }
+    
+        &__error {
+            color: $pure-white;
+        }
+    }
+
+    .score-page {
+        &__title {
+            color: $pure-white;
+        }
+    
+        &__score-display {
+            background-color: $navy;
+        }
+    
+        &__subject {
+            color: $pure-white;
+        }
+    
+        &__score {
+            color: $pure-white;
+        }
+    
+        &__caption {
+            color: $light-bluish;
+        }
+    }
 }
 
 header {
@@ -132,6 +192,12 @@ picture {
     margin-top: 32px;
     width: 100%;
     max-width: 327px;
+
+    display: none;
+
+    &--active {
+        display: block;
+    }
 
     &__title {
         font-family: 'Rubik';
@@ -230,6 +296,12 @@ picture {
     width: 100%;
     max-width: 327px;
 
+    display: none;
+
+    &--active {
+        display: block;
+    }
+
     &__questions-count {
         font-family: 'Rubik';
         font-style: italic;
@@ -265,12 +337,13 @@ picture {
         justify-content: flex-start;
 
         div {
-            // width: 0%;
+            width: 0%;
             height: 8px;
 
             background: $purple;
             border-radius: 104px;
 
+            transition: width .5s ease-out;
         }
     }
 
@@ -379,6 +452,8 @@ picture {
         height: 40px;
         border-radius: 6px;
 
+        color: $dark-navy;
+
         background-color: $light-grey;
     }
 
@@ -411,7 +486,9 @@ picture {
 
     &__error {
         margin-top: 12px;
-        display: flex;
+
+        display: none;
+
         align-items: center;
         justify-content: center;
         gap: 8px;
@@ -429,6 +506,10 @@ picture {
             width: 32px;
             height: 32px;
         }
+
+        &--active {
+            display: flex;
+        }
     }
 }
 
@@ -436,6 +517,12 @@ picture {
     margin-top: 32px;
     width: 100%;
     max-width: 327px;
+
+    display: none;
+
+    &--active {
+        display: block;
+    }
 
     &__title {
         font-family: 'Rubik';
@@ -632,8 +719,11 @@ picture {
         margin-top: 85px;
         max-width: 1160px;
         
-        display: flex;
         justify-content: space-between;
+
+        &--active {
+            display: flex;
+        }
 
         &__caption {
             margin-top: 48px;

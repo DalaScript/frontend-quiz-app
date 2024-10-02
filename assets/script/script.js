@@ -19,6 +19,7 @@ const progressBar = document.getElementById("quiz-page__progress-bar");
 const answersContainer = document.getElementById("quiz-page__answers-container");
 const submitBtn = document.getElementById("quiz-page__submit-btn");
 const nextQuestionBtn = document.getElementById("quiz-page__next-question-btn");
+const errorEl = document.querySelector(".quiz-page__error");
 
 const scorePage = document.getElementById('score-page');
 const finalScore = scorePage.querySelector('.score-page__score');
@@ -58,7 +59,6 @@ const startQuiz = () => {
             const selectedSubject = btn.getAttribute('data-subject');
             currentSubject = data.find(s => s.title === selectedSubject);
 
-
             subjectContainer.innerHTML = `
                 <span class="score-page__img-box score-page__img-box--${currentSubject.title.toLowerCase()}">
                     <img class="score-page__img" src="${currentSubject.icon}" width="28.5" height="28.5" alt="html icon">
@@ -66,8 +66,8 @@ const startQuiz = () => {
                 ${currentSubject.title}
             `;
 
-            startMenu.style.display = "none";
-            quizPage.style.display = "block";
+            startMenu.classList.remove("start-menu--active");
+            quizPage.classList.add("quiz-page--active");
 
             loadQuestion();
         });
@@ -108,7 +108,9 @@ const loadQuestion = () => {
             btn.classList.add("quiz-page__answer-btn--active");
             selectedAnswer = option;
 
-            submitBtn.classList.add('quiz-page__submit-btn--active');
+            if(errorEl.classList.contains("quiz-page__error--active")) {
+                errorEl.classList.remove("quiz-page__error--active");
+            }
         });
 
         answersContainer.appendChild(btn);
@@ -149,6 +151,8 @@ submitBtn.addEventListener('click', () => {
 
         submitBtn.classList.remove('quiz-page__submit-btn--active');
         nextQuestionBtn.classList.add('quiz-page__next-question-btn--active');
+    } else {
+        errorEl.classList.add("quiz-page__error--active");
     }
 });
 
@@ -166,13 +170,13 @@ nextQuestionBtn.addEventListener('click', () => {
 
 playAgainBtn.addEventListener('click', () => {
     resetQuiz();
-    scorePage.style.display = 'none',
-    startMenu.style.display = 'flex';
+    scorePage.classList.remove('score-page--active');
+    startMenu.classList.add("start-menu--active");
 });
 
 const showScore = () => {
-    quizPage.style.display = 'none';
-    scorePage.style.display = 'block';
+    quizPage.classList.remove('quiz-page--active');
+    scorePage.classList.add('score-page--active');
 
     scorePageSubjet.innerHTML = `
         <span class="score-page__img-box score-page__img-box--${currentSubject.title.toLowerCase()}">
@@ -187,7 +191,7 @@ const showScore = () => {
 const resetQuiz = () => {
     currentQuestionIndex = 0;
     score = 0;
-    progressBar.style.width = '0%';
+    progressBar.querySelector("div").style.width = '0%';
     submitBtn.classList.add('quiz-page__submit-btn--active');
     nextQuestionBtn.classList.remove('quiz-page__next-question-btn--active');
 };
