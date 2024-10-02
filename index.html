@@ -74,16 +74,19 @@
         </div>
       </div>
       <div class="quiz-page__answers-container" id="quiz-page__answers-container">
-        <!-- <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">A</span>4.5 : 1</button>
-        <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">B</span>3 : 1</button>
-        <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">C</span>2.5 : 1</button>
-        <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">D</span>5 : 1</button> -->
+        <div class="quiz-page__answers" id="quiz-page__answers">
+          <!-- <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">A</span>4.5 : 1</button>
+          <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">B</span>3 : 1</button>
+          <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">C</span>2.5 : 1</button>
+          <button class="quiz-page__answer-btn"><span class="quiz-page__answer-box">D</span>5 : 1</button> -->
+        </div>
+        <button class="quiz-page__submit-btn quiz-page__submit-btn--active" id="quiz-page__submit-btn">Submit answer</button>
+        <p class="quiz-page__error">
+          <img class="quiz-page__error-img" src="./assets/images/icon-error.svg" alt="error icon">Please select an answer
+        </p>
+        <button class="quiz-page__next-question-btn" id="quiz-page__next-question-btn">Next Question</button>
       </div>
-      <button class="quiz-page__submit-btn quiz-page__submit-btn--active" id="quiz-page__submit-btn">Submit answer</button>
-      <p class="quiz-page__error">
-        <img class="quiz-page__error-img" src="./assets/images/icon-error.svg" alt="error icon">Please select an answer
-      </p>
-      <button class="quiz-page__next-question-btn" id="quiz-page__next-question-btn">Next Question</button>
+      
     </section>
 
     <section class="score-page" id="score-page">
@@ -91,16 +94,19 @@
         Quiz completed <br />
         <span class="score-page__title-bold">You scored...</span>
       </p>
-      <div class="score-page__score-display">
-        <p class="score-page__subject" id="score-page__subject">
+      <div class="score-page__second-part">
+        <div class="score-page__score-display">
+          <p class="score-page__subject" id="score-page__subject">
 
-        </p>
-        <p class="score-page__score">8</p>
-        <p class="score-page__caption">
-          out of 10
-        </p>
+          </p>
+          <p class="score-page__score">8</p>
+          <p class="score-page__caption">
+            out of 10
+          </p>
+        </div>
+        <button class="score-page__btn">Play Again</button>
       </div>
-      <button class="score-page__btn">Play Again</button>
+
     </section>
   </main>
 <script src="./assets/script/darkmode.js"></script>

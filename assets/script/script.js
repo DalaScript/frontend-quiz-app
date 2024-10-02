@@ -16,7 +16,7 @@ const quizPage = document.getElementById("quiz-page");
 const questionCount = document.getElementById('quiz-page__questions-count');
 const questionContainer = document.getElementById("quiz-page__question");
 const progressBar = document.getElementById("quiz-page__progress-bar");
-const answersContainer = document.getElementById("quiz-page__answers-container");
+const answersContainer = document.getElementById("quiz-page__answers");
 const submitBtn = document.getElementById("quiz-page__submit-btn");
 const nextQuestionBtn = document.getElementById("quiz-page__next-question-btn");
 const errorEl = document.querySelector(".quiz-page__error");
@@ -191,6 +191,7 @@ const showScore = () => {
 const resetQuiz = () => {
     currentQuestionIndex = 0;
     score = 0;
+    subjectContainer.innerHTML = '';
     progressBar.querySelector("div").style.width = '0%';
     submitBtn.classList.add('quiz-page__submit-btn--active');
     nextQuestionBtn.classList.remove('quiz-page__next-question-btn--active');

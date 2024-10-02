@@ -4,6 +4,7 @@ $grey-navy: #626C7F;
 
 $light-bluish: #ABC1E1;
 $light-grey: #F4F6FA;
+$light-purple: #F6E7FF;
 $pure-white: #FFFFFF;
 
 $purple: #a729f5;
@@ -86,6 +87,10 @@ body {
         &__error {
             color: $pure-white;
         }
+
+        box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
+
+        box-shadow: 0px 16px 40px rgba(49, 62, 81, 0.14);
     }
 
     .score-page {
@@ -124,7 +129,7 @@ header {
     justify-content: space-between;
 }
 
-.subject-container {
+#subject-container {
     width: 167px;
     height: 40px;
 }
@@ -347,7 +352,7 @@ picture {
         }
     }
 
-    &__answers-container {
+    &__answers {
         margin-top: 40px;
 
         display: flex;
@@ -360,7 +365,7 @@ picture {
         padding: 9px 57px 9px 9px;
         border: 3px solid $pure-white;
         width: 100%;
-        height: 64px;
+        min-height: 64px;
         border-radius: 12px;
 
         box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
@@ -460,6 +465,10 @@ picture {
         color: $grey-navy;
 
         background-color: $light-grey;
+    }
+
+    &__answer-option {
+        max-inline-size: 199px;
     }
 
     &__submit-btn,
@@ -654,7 +663,7 @@ picture {
         max-width: 640px;
     }
 
-    .subject-container {
+    #subject-container {
         width: 253px;
         height: 56px;
     }
@@ -730,18 +739,41 @@ picture {
             margin-top: 40px;
         }
 
-        &__answers-container {
+        &__answers {
             margin-top: 64px;
 
             gap: 24px;
         }
 
         &__answer-btn {
-            height: 80px;
-
+            min-height: 80px;
             gap: 32px;
 
             font-size: 28px;
+
+            &--correct-icon { 
+                &::after {
+                    width: 40px;
+                    height: 40px;
+                    
+                    top: 17px;
+                    right: 9px;
+                }
+            }
+    
+            &--wrong {
+                &::after {
+                    width: 40px;
+                    height: 40px;
+                    
+                    top: 17px;
+                    right: 9px;
+                }
+            }
+        }
+
+        &__answer-option {
+            max-inline-size: 456px;
         }
 
         &__answer-box {
@@ -845,6 +877,111 @@ picture {
         &__subject {
             padding: 20px;
             height: 96px;
+        }
+    }
+
+    .quiz-page {
+        margin: 85px 0 172px;
+        max-width: 1160px;
+
+        justify-content: space-between;
+
+
+        &--active {
+            display: flex;
+        }
+
+        &__question-container {
+            max-width: 465px;
+            width: 100%;
+        }
+
+        &__questions-count {
+            font-family: 'Rubik';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 150%;
+        }
+
+        &__question {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 120%;
+        }
+
+        &__progress-bar {
+            margin-top: 164px;
+        }
+
+        &__answers-container {
+            max-width: 564px;
+            width: 100%;
+        } 
+
+        &__answers {
+            margin: 0;
+        }
+
+        &__answer-btn {
+            min-height: 92px;
+        }
+
+        &__answer-option {
+            max-inline-size: 364px;
+        }
+    }
+
+    .score-page {
+        margin: 85px 0 224px;
+        max-width: 1160px;
+
+        justify-content: space-between;
+
+        &--active {
+            display: flex;
+        }
+
+        &__title {
+            max-width: 450px;
+            width: 100%;
+        }
+
+        &__second-part {
+            max-width: 564px;
+            width: 100%;
+        }
+
+        &__score-display {
+            margin-top: 0;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    button:not(:disabled) {
+        cursor: pointer;
+    }
+
+    .quiz-page {
+        
+        &__answer-btn {
+            &:not(.quiz-page__answer-btn--active, .quiz-page__answer-btn:disabled):hover {
+                .quiz-page {
+                    &__answer-box {
+                        color: $purple;
+
+                        background-color: $light-purple;
+                    }
+                }
+            }
+        }
+        
+        &__submit-btn:hover,
+        &__next-question-btn:hover {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), $purple;
         }
     }
 }
